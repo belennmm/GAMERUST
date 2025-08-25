@@ -1,0 +1,29 @@
+[package]
+name = "battlecity-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Alexander Aronov <aronov.aleks@outlook.com>"]
+default-run = "battlecity-raylib"
+
+
+# ----- Binaries -----
+[[bin]]
+name = "battlecity-piston"
+path = "src/main_piston.rs"
+required-features = ["piston"]
+
+[[bin]]
+name = "battlecity-raylib"
+path = "src/main.rs"
+
+
+
+[dependencies]
+rand = "0.8.5"
+glam = "0.30.5"
+
+# --- Raylib stack ---
+raylib = "5.5.1"
+piston = "1.0.0"
+
+piston2d-opengl_graphics = "0.83.0"
